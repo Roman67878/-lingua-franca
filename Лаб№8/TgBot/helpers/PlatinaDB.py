@@ -5,7 +5,6 @@ import os
 import tracemalloc
 tracemalloc.start()
 
-# Создание базы данных SQLite и таблицы для хранения текстов песен
 conn = sqlite3.connect('songs.db')
 cursor = conn.cursor()
 cursor.execute('''
@@ -17,7 +16,6 @@ cursor.execute('''
 conn.commit()
 
 
-# Функция для добавления песни в базу данных
 async def add_song_from_file(file_path: str):
     if not file_path.endswith('.txt'):
         print("Invalid file format. Please provide a .txt file.")
@@ -45,7 +43,6 @@ async def get_song_text(song_id: int):
 #    await message.answer("Введите номер песни:")
 
 
-# Обработчик текстового сообщения
 # @dp.message()
 # async def process_message(message: Message):
     try:
