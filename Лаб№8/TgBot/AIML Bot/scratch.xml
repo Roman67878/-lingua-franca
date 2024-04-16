@@ -1,0 +1,44 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+
+<category>
+    <pattern>Привет</pattern>
+    <template>Привет! Добро пожаловать а магазин компьютерных дисков! Чем я могу вам помочь сегодня?</template>
+</category>
+
+<category>
+    <pattern>Могу я купить диски</pattern>
+    <template>Конечно, у нас есть широкий выбор компьютерных дисков. Какой именно диск вас интересует?</template>
+</category>
+
+<category>
+    <pattern>Могу я купить *</pattern>
+    <template>Да, мы можем помочь вам найти <star/> <star/>. What specifications are you looking for in a disk?</template>
+</category>
+
+<category>
+    <pattern>Как тебя зовут??</pattern>
+    <template>Меня зовут ДискБот. Чем я могу помочь вам сегодня?</template>
+</category>
+
+<category>
+    <pattern>Можешь помочь мне с дисками??</pattern>
+    <template>Да, я могу помочь вам с этим. Какой бренд дисков вас интересует??</template>
+</category>
+
+<category>
+    <pattern>Меня зовут*</pattern>
+    <template>Приятно познакомиться, <star/>! Чем я могу помочь вам сегодня??</template>
+</category>
+
+<category>
+    <pattern>Ничего не нужно</pattern>
+    <template>Хорошо, дайте знать, если вы передумаете.</template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+    <template>Балда ты, спроси про диски</template>
+</category>
+
+    </aiml>
