@@ -36,9 +36,3 @@
     <template>Хорошо, дайте знать, если вы передумаете.</template>
 </category>
 
-<category>
-    <pattern>*</pattern>
-    <template>Балда ты, спроси про диски</template>
-</category>
-
-    </aiml>
