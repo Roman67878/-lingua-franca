@@ -1,5 +1,5 @@
 import nltk
-import pymorphy2
+import pymorphy3
 from nltk.corpus import stopwords
 
 from tokens_task.tokenizee import nltk_tokenize
@@ -11,7 +11,7 @@ with open('../grafikk/Herzen.txt', 'r') as file:
 
 def clean_isalpha(text):
     filtered_text = ''.join(char for char in text if char.isalpha() or char.isspace())
-    with open('isalpha.txt', 'w') as clean_file:
+    with open('isalpha1.txt', 'w') as clean_file:
         clean_file.write(filtered_text)
     return clean_file
 
@@ -35,14 +35,13 @@ def stemm_nltk(text):
 
 
 def lemma_pymorph(text):
-    morph = pymorphy2.MorphAnalyzer(lang='ru')
+    morph = pymorphy3.MorphAnalyzer(lang="ru")
     token_text = nltk.word_tokenize(text)
-    lemmed_text = ''.join([morph.parse(word)[0] for word in token_text])
+    lemmed_text = ''.join([morph.parse(word)[0].normal_form for word in token_text])
     with open('lemmed.txt', 'w') as clean_file:
         clean_file.write(lemmed_text)
     return clean_file
     return lemmed_text
 
 
-clean_isalpha(text=text_for_lemmatize)
-# lemma_pymorph(text=text_for_lemmatize)
+lemma_pymorph(text=text_for_lemmatize)
